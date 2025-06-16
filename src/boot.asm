@@ -15,7 +15,7 @@ start:
     mov si, boot_msg
     call print_string
 
-    ; TFS kontrolü – Sektör 2'yi oku (LBA 1)
+    ; AHBFS kontrolü – Sektör 2'yi oku (LBA 1)
     mov ah, 0x02        ; disk read
     mov al, 1           ; kaç sektör: 1
     mov ch, 0           ; cylinder
